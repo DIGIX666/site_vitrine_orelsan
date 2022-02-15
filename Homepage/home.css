@@ -1,0 +1,411 @@
+@import url('https://fronts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Supermercado+One&display=swap');
+
+/* https://colorhunt.co/palette/0f0e0e5412128b9a46eeeeee -> palette de couleurs */
+
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body
+{
+  background: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ======== Header ============ */
+.container
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.navigation
+{
+  width: 350px;
+  height: 70px;
+  background: #541212;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.navigation ul
+{
+  display: flex;
+  width: 350px;
+}
+
+.navigation ul li
+{
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+
+.navigation ul li a
+{
+  position: relative;
+  padding-left: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.navigation ul li a .icon
+{
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  transition: 0.5s;
+  color:  #EEEEEE ;
+}
+
+
+.navigation ul li:hover a .icon
+{
+  transform: translateY(-40px);
+}
+
+.navigation ul li a .text
+{
+  position: absolute;
+  color: #EEEEEE;
+  font-weight: 400;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.navigation ul li:hover a .text
+{
+  opacity: 1;
+  transform: translateY(5px);
+}
+
+
+.indicator
+{
+  position: absolute;
+  margin-left: 40px;
+  top: -50%;
+  width: 70px;
+  height: 50px;
+  background: #8B9A46;
+  border-radius: 50%;
+  border: 6px solid black;
+}
+
+
+.indicator::before
+{
+  content: '';
+  position: absolute;
+  top: 65%;
+  left: -15px;
+  width: 17px;
+  height: 17px;
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 0px -10px 0 0 black;
+}
+
+
+.indicator::after
+{
+  content: '';
+  position: absolute;
+  top: 65%;
+  right: -15px;
+  width: 17px;
+  height: 17px;
+  background: transparent;
+  border-top-left-radius: 20px;
+  box-shadow: 0px -10px 0 0 black;
+}
+
+
+.navigation ul li:nth-child(1):hover ~ .indicator
+{
+  transform: translateX(calc(70px * 0));
+}
+
+.navigation ul li:nth-child(2):hover ~ .indicator
+{
+  transform: translateX(calc(70px * 1));
+}
+
+.navigation ul li:nth-child(3):hover ~ .indicator
+{
+  transform: translateX(calc(70px * 2));
+}
+
+.navigation ul li:nth-child(4):hover ~ .indicator
+{
+  transform: translateX(calc(70px * 3));
+}
+
+.navigation ul li:nth-child(5):hover ~ .indicator
+{
+  transform: translateX(calc(70px * 4));
+}
+
+/* ====================== CD ======================*/
+.cd 
+{
+  clip-path: circle(50% at 50% 50%);
+  height: 100px;
+  width: 100px;
+  margin-left: 15px;
+  -webkit-animation: spin 3.5s linear infinite;
+  -moz-animation: spin 3.5s linear infinite;
+  animation: spin 3.5s linear infinite;
+}
+
+@-webkit-keyframes spin{
+  100%{-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin{
+  100%{-webkit-transform: rotate(360deg);}
+}
+@keyframes spin{
+  100%{-webkit-transform: rotate(360deg);}
+}
+
+/* ================ Photo orelsan PP ============ */
+.img__orel
+{
+  height: 400px;
+  width: 400px;
+  margin-top: 40px;
+  margin-left: 50px;
+  clip-path: circle(50% at 50% 50%);
+}
+
+/* ============== Bloc Text à cotès de la PP ================ */
+
+.bloc__midle
+{
+  display: flex;
+  margin: 20px;
+}
+
+.description
+{
+  background: #EEEEEE;
+  margin-left: 80px;
+  margin-top: 90px;
+  width: 800px;
+  border-radius: 20px;
+}
+
+h1
+{
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  color: #8B9A46;
+  font-family: 'Supermercado One', cursive;
+}
+
+p
+{
+  font-family: 'Inconsolata', monospace;
+  font-size: 35px;
+  padding: 20px;
+  text-align: center;
+  color: black;
+}
+
+
+/* ============== FOOTER =================== */
+footer
+{
+  background: #0F0E0E;
+  height: 165px;
+  border-radius: 20px;
+}
+
+.bloc__footer
+{
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  margin-top: 100px;
+  height: 80px;
+}
+
+.contact
+{
+  margin-top: 40px;
+  margin-right: 150px;
+  color: white;
+  font-size: 20px;
+  font-family: 'Inconsolata', monospace;
+}
+
+.footer__social
+{
+  font-size: 2rem;
+  color: #8B9A46;
+  padding: 20px;
+}
+
+.footer__social:hover
+{
+  color: lightblue;
+}
+
+.copyright
+{
+  color: white;
+  font: optional;
+  font-size: 25px;
+  margin-top: 20px;
+  font-family: 'Inconsolata', monospace;
+}
+
+
+.p__footer
+{
+  color: white;
+  font-family: 'Poppins';
+  margin-left: 20px;
+  margin-top: 30px;
+  font-family: 'Inconsolata', monospace;
+  font-size: 30px;
+}
+
+
+/* MEDIA SCREEN */
+
+@media screen and (max-width: 1295px ){
+  
+  .cd
+  {
+    height: 80px;
+    width: 80px;
+  }
+
+  .navigation
+  {
+    margin-top: 20px;
+    margin-left: 25px;    
+  }
+}
+
+@media screen and (max-width: 1160px) {
+
+  .contact
+  {
+    margin-right: 50px;
+  }
+  
+  .copyright
+  {
+    margin-left: 40px;
+  }
+
+  .pp
+  {
+    margin-top: 50px;
+  }
+
+  .description
+  {
+    margin-right: 30px;
+  }
+
+  .cd
+  {
+    height: 70px;
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 1081px ) {
+  
+  h1
+  {
+    font-size: 40px;
+  }
+
+  p
+  {
+    font-size: 30px;
+  }
+
+  .img__orel
+  {
+    height: 350px;
+    width: 350px;
+  }
+
+  .cd
+  {
+    height: 65px;
+    width: 65px;
+  }
+
+  .cd__droite
+  {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 1051px) {
+
+  .cd
+  {
+    height: 60px;
+    width: 60px;
+  }
+  
+  .cd__droite 
+  {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 1011px) {
+
+  .cd
+  {
+    height: 55px;
+    width: 55px;
+  }
+  
+  .cd__droite 
+  {
+    margin-right: 10px;
+  }
+
+  .navigation
+  {
+    margin-left: 10px;
+  }
+
+  .p__footer
+  {
+    font-size: 25px;
+  }
+}
